@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <header>
@@ -24,7 +25,8 @@
                       <a href="#idea" class="link">Nossa ideia</a>
                       <a href="#diferencial" class="link">Nosso diferencial</a>
                       <a href="#public" class="link">Público alvo</a>
-                      <a href="#contactUs" class="btn-student">Conheça-nos</a>
+                      <a href="#plans" class="link">Planos</a>
+                      <a href="#contactUs" class="btn-student">Contate-nos</a>
                     </div>
                     <button id="closeBtn"><img src="./images/close.png" alt="close icon"></button>
                   </div>
@@ -35,7 +37,7 @@
     </header>
     <main>
         <div class="container">
-          <section id="idea">
+          <section id="idea" class="animate__animated animate__fadeInDown">
             <div>
               <div class="overlay"></div>
               <p class="ideaText"><span>Estudar nunca foi tão fácil!</span> Prepare-se para o ENEM, vestibulares, 
@@ -97,23 +99,75 @@
               </div>
             </div>
           </section>
-          <section id="contactUs">
-            <h3 class="section-title">Conheça-nos</h3>
-            <div>
-              <form id="form">
-                <input type="text" placeholder="Nome" required>
-                <input type="text" placeholder="Email" required>
-                <input type="text" placeholder="Telefone" required>
-                <input type="text" placeholder="Tipo de prova desejada" required>
-                <button type="submit">Enviar</button>
-              </form>
+          <section id="plans">
+            <h3 class="section-title">Conheça nossos planos</h3>
+            <div class="plansDiv animate__animated animate__fadeInDown">
+              <div>
+                <h3 class="plansTitlePrimary">Enem e Vestibular <span class="premium">Premium</span></h3>
+                <ul>
+                  <li class="planLink">Acesso a correção de redação com corretores reais e com Inteligência artificial</li>
+                  <li class="planLink">Acesso ilimitado às aulas gravadas e ao vivo</li>
+                  <li class="planLink">Acesso aos simulados inteligentes</li>
+                </ul>
+                <h3 class="plansTitleSecondary">Enem e Vestibular <span class="basic">Basic</span></h3>
+                <ul>
+                  <li class="planLink">Acesso a correção de redação apenas com Inteligência artificial</li>
+                  <li class="planLink">Acesso limitado às aulas</li>
+                  <li class="planLink">Acesso a simulados simples com até 100 questões por mês</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="plansTitlePrimary">Ensino superior <span class="premium">Premium</span></h3>
+                <ul>
+                  <li class="planLink">Cursos que contam como horas complementares</li>
+                </ul>
+                <h3 class="plansTitleSecondary">Ensino superior <span class="basic">Basic</span></h3>
+                <ul>
+                  <li class="planLink">Integração com a sua instituição de ensino</li>
+                  <li class="planLink">Receber notificações de atividades ou eventos da sua instituição</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="plansTitlePrimary">Concurso <span class="premium">Premium</span></h3>
+                <ul>
+                  <li class="planLink">Acesso a correção de redação com corretores reais e com Inteligência artificial</li>
+                  <li class="planLink">Acesso ilimitado às aulas gravadas e ao vivo</li>
+                  <li class="planLink">Acesso aos simulados inteligentes</li>
+                </ul>
+                <h3 class="plansTitleSecondary">Concurso <span class="basic">Basic</span></h3>
+                <ul>
+                  <li class="planLink">Acesso a correção de redação apenas com Inteligência artificial</li>
+                  <li class="planLink">Acesso limitado às aulas</li>
+                  <li class="planLink">Acesso a simulados simples com até 100 questões por mês</li>
+                </ul>
+              </div>
             </div>
+          </section>
+          <section id="contactUs">
+            <h3 class="section-title">Contate-nos</h3>
+            <form id="contact-form">
+              <input type="text" name="name" placeholder="Seu nome" required>
+              <input type="email" name="email" placeholder="Seu e-mail" required>
+              <textarea name="message" placeholder="Sua mensagem" required></textarea>
+              <button type="submit">Enviar</button>
+            </form>
           </section>
         </div>
     </main>
     <footer>
-      <p>Estuda Fácil</p>
+      <div class="container">
+        <div class="contact">
+          <h4>Contato</h4>
+          <p>estudafacil.contato@gmail.com</p>
+        </div>
+        <div class="social">
+          <h4>Rede social</h4>
+          <a href="https://www.instagram.com/estuda.facilapp/" target="_blank"><img src="images/instagram.png" alt="instagram icon"></a>
+        </div>
+      </div>
+      <p>&copy; 2024 Estuda Fácil. Todos os direitos reservados.</p>
     </footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

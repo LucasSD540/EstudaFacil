@@ -145,27 +145,71 @@ html {
 .titleP {
     margin: 24px 0;
     font-weight: bold;
+    color: #9b59b6;
+}
+
+#plans {
+    margin-top: 24px;
+}
+
+.plansDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.planLink {
+    margin-bottom: 8px;
+}
+
+.plansDiv > div {
+    margin: 0 auto;
+    max-width: 320px;
+    width: 100%;
+    height: 430px;
+    box-shadow: 1px 1px 19px 3px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.plansDiv > div:hover {
+    box-shadow: 1px 1px 19px 3px #9b59b6;
+}
+
+.plansTitlePrimary {
+    margin-bottom: 12px;
+}
+
+.plansTitleSecondary {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.premium {
+    color: #f1c40f;
+}
+
+.basic {
+    color: #bdc3c7;
 }
 
 #contactUs {
     margin-top: 24px;
 }
 
-#contactUs > div {
+#contact-form {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 320px;
     width: 100%;
     height: 360px;
     box-shadow: 1px 1px 19px 3px rgba(0,0,0,0.75);
-}
-
-#form {
-    display: flex;
-    flex-direction: column;
+    border-radius: 8px;
     padding: 32px;
 }
 
-#form > input {
+#contact-form > input {
     width: 100%;
     height: 30px;
     margin: 8px auto;
@@ -175,8 +219,8 @@ html {
     outline: none;
 }
 
-#form > button {
-    margin-top: 32px;
+#contact-form > button {
+    margin-top: 24px;
     border: none;
     background-color: #2ecc71;
     color: #fff;
@@ -187,20 +231,16 @@ html {
     cursor: pointer;
 }
 
+#contact-form > textarea {
+    resize: none;
+    margin-top: 8px;
+    border: 1px solid #9b59b6;
+    padding: 16px;
+}
+
 .section-title {
     margin-bottom: 24px;
     text-align: center;
-}
-
-.title {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.sub-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 16px 0;
 }
 
 .text {
@@ -229,17 +269,42 @@ html {
 footer {
     margin-top: 48px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
     background-color: #9b59b6;
     width: 100%;
     height: 150px;
 }
 
-footer p {
-    font-weight: bold;
-    font-size: 18px;
+footer > p {
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+footer > .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact, .social {
+    width: 100%;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h4 {
     color: #fff;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -336,5 +401,18 @@ footer p {
 
     .section-style-2 {
         height: 640px;
+    }
+
+    .plansDiv {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    footer > .container {
+        flex-direction: column;
+    }
+
+    .social {
+        margin-top: 12px;
     }
 }
